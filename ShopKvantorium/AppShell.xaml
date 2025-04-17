@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ShopKvantorium.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ShopKvantorium"
+    Shell.FlyoutBehavior="Disabled"
+    Title="ShopKvantorium"
+    BackgroundColor="Orange"
+    Shell.TitleColor="White">
+
+    
+    
+    <TabBar>
+        <ShellContent
+        Icon="home.png"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+        <ShellContent
+        Icon="poisk.png"
+        ContentTemplate="{DataTemplate local:Poisk}"
+        Route="MainPage" />
+
+        <ShellContent
+        Icon="korzina.png"
+        ContentTemplate="{DataTemplate local:Korzina}"
+        Route="MainPage" />
+
+        <ShellContent
+        Icon="profill.png"
+        ContentTemplate="{DataTemplate local:Akaunt}"
+        Route="MainPage" />
+    </TabBar>
+    
+    
+
+
+</Shell>

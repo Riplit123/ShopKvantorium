@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShopKvantorium.Akaunt"
+             Title="Профиль">
+    <ScrollView Orientation="Vertical">
+
+        <VerticalStackLayout>
+
+            <Frame HeightRequest="70" WidthRequest="380" BackgroundColor="Orange" BorderColor="Transparent" Margin="0,-10,0,0">
+                <SearchBar Placeholder="Поиск" TextColor="White" PlaceholderColor="White" CancelButtonColor="White" BackgroundColor="#FFB773" />
+            </Frame>
+
+            <HorizontalStackLayout>
+
+                <!--Профиль-->
+                <Grid Margin="-3,-1,0,0">
+                    <Border BackgroundColor="Orange" HeightRequest="100" WidthRequest="365" Stroke="Orange" StrokeShape="RoundRectangle 0,0,15,15">
+                        <Grid>
+                            <Label Text="И.И. Иванович"  Margin="120,30,0,0" FontSize="20" FontFamily="Bank" TextColor="White"/>
+                            <Label FontSize="10" Margin="120,60,0,0" TextColor="#6B6B6B" FontFamily="Goth" Text="Перейти в профиль >"/>
+                            <Border BackgroundColor="#D7D7D7" HeightRequest="80" WidthRequest="80" StrokeShape="RoundRectangle 15,15,15,15" Margin="-240,0,0,0" Stroke="#D7D7D7" StrokeThickness="4">
+                            </Border>
+                        </Grid>
+                    </Border>
+                    <Button HeightRequest="100" WidthRequest="365" CornerRadius="25" BackgroundColor="Transparent" Margin="0,0,0,0" Clicked="Button_Clicked"/>
+                </Grid>
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+
+                <!--Профиль-->
+                <Grid Margin="0,10,0,0">
+                    <Border BackgroundColor="Orange" HeightRequest="80" WidthRequest="360" Stroke="Orange" StrokeShape="RoundRectangle 15,15,15,15">
+                        <Grid>
+                            <Label Text="0" x:Name="kvantoriki" Margin="40,30,0,0" FontSize="24" FontFamily="Bank" TextColor="White"/>
+                            <Label FontSize="12" Margin="40,20,0,0" TextColor="#6B6B6B" FontFamily="Goth" Text="Баланс:"/>
+                            <Image Source="logo.png" Margin="-165,20,0,0" HeightRequest="20" WidthRequest="20"/>
+                            <Border BackgroundColor="#D7D7D7" HeightRequest="40" WidthRequest="100" StrokeShape="RoundRectangle 15,15,15,15" Margin="200,10,0,0" Stroke="#D7D7D7" StrokeThickness="4">
+                                <Button Text="Заработать" Clicked="Button_Clicked_1" Margin="20,10,0,0" FontSize="10" FontFamily="Goth" TextColor="White"/>
+                            </Border>
+                        </Grid>
+                    </Border>
+                </Grid>
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+
+                <!--Рекомендации-->
+                <Grid Margin="5,0,0,0">
+                    <Border BackgroundColor="White" HeightRequest="30" WidthRequest="350" Stroke="White" >
+                        <Grid>
+                            <Label Text="Вы смотрели:"  Margin="10,5,0,0" FontSize="16" FontFamily="Bank" TextColor="Black"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+
+            </HorizontalStackLayout>
+
+            <VerticalStackLayout>
+
+
+                <HorizontalStackLayout>
+
+                    <!--Футболка-->
+                    <Grid Margin="0,0,0,0">
+                        <Border BackgroundColor="White" HeightRequest="180" WidthRequest="180" Stroke="White">
+                            <Grid>
+                                <Label Text="Кванто-футболка"  Margin="40,140,0,0" FontSize="12" FontFamily="Bank" TextColor="Black"/>
+                                <Label FontSize="7" Margin="20,160,0,0" TextColor="#6B6B6B" FontFamily="Goth" Text="Черная футболка с принтом канториума"/>
+                                <Border BackgroundColor="Transparent" HeightRequest="120" WidthRequest="160" StrokeShape="RoundRectangle 15,15,15,15" Margin="0,-50,0,0" Stroke="#D7D7D7" StrokeThickness="4">
+                                    <Image Source="fut.jpg" />
+                                </Border>
+                            </Grid>
+                        </Border>
+                    </Grid>
+
+                    <!--Крушка-->
+                    <Grid Margin="0,0,0,0">
+                        <Border BackgroundColor="White" HeightRequest="180" WidthRequest="180" Stroke="White">
+                            <Grid>
+                                <Label Text="Кванто-крушка"  Margin="40,140,0,0" FontSize="12" FontFamily="Bank" TextColor="Black"/>
+                                <Label FontSize="7" Margin="20,160,0,0" TextColor="#6B6B6B" FontFamily="Goth" Text="Белая кружка с принтом канториума"/>
+                                <Border BackgroundColor="Transparent" HeightRequest="120" WidthRequest="160" StrokeShape="RoundRectangle 15,15,15,15" Margin="0,-50,0,0" Stroke="#D7D7D7" StrokeThickness="4">
+                                    <Image Source="kru.jpg" />
+                                </Border>
+
+                            </Grid>
+                        </Border>
+                    </Grid>
+
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout>
+
+                    <!--Шоппер-->
+                    <Grid Margin="0,0,0,0">
+                        <Border BackgroundColor="White" HeightRequest="180" WidthRequest="180" Stroke="White">
+                            <Grid>
+                                <Label Text="Кванто-шоппер"  Margin="40,140,0,0" FontSize="12" FontFamily="Bank" TextColor="Black"/>
+                                <Label FontSize="7" Margin="20,160,0,0" TextColor="#6B6B6B" FontFamily="Goth" Text="Белый шоппер с принтом канториума"/>
+                                <Border BackgroundColor="Transparent" HeightRequest="120" WidthRequest="160" StrokeShape="RoundRectangle 15,15,15,15" Margin="0,-50,0,0" Stroke="#D7D7D7" StrokeThickness="4">
+                                    <Image Source="sop.jpg" />
+                                </Border>
+                            </Grid>
+                        </Border>
+                    </Grid>
+
+                    <!--Робо-брелок-->
+                    <Grid Margin="0,0,0,0">
+                        <Border BackgroundColor="White" HeightRequest="180" WidthRequest="180" Stroke="White">
+                            <Grid>
+                                <Label Text="Робо-брелок"  Margin="40,140,0,0" FontSize="12" FontFamily="Bank" TextColor="Black"/>
+                                <Label FontSize="7" Margin="20,160,0,0" TextColor="#6B6B6B" FontFamily="Goth" Text="Брелок металический с принтом Робо-кантумом"/>
+                                <Border BackgroundColor="#D7D7D7" HeightRequest="120" WidthRequest="160" StrokeShape="RoundRectangle 15,15,15,15" Margin="0,-50,0,0" Stroke="#D7D7D7" StrokeThickness="4">
+                                    <Image Source="bril.jpg" />
+                                </Border>
+                            </Grid>
+                        </Border>
+                    </Grid>
+
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout>
+
+                    <!--Носки-->
+                    <Grid Margin="0,0,0,0">
+                        <Border BackgroundColor="White" HeightRequest="180" WidthRequest="180" Stroke="White">
+                            <Grid>
+                                <Label Text="Кванто-носки"  Margin="40,140,0,0" FontSize="12" FontFamily="Bank" TextColor="Black"/>
+                                <Label FontSize="7" Margin="20,160,0,0" TextColor="#6B6B6B" FontFamily="Goth" Text="Оранжевая пара носков с принтом канториума"/>
+                                <Border BackgroundColor="Transparent" HeightRequest="120" WidthRequest="160" StrokeShape="RoundRectangle 15,15,15,15" Margin="0,-50,0,0" Stroke="#D7D7D7" StrokeThickness="4">
+                                    <Image Source="nos.jpg" />
+                                </Border>
+                            </Grid>
+                        </Border>
+                    </Grid>
+
+                    <!---Наклейки-->
+                    <Grid Margin="0,0,0,0">
+                        <Border BackgroundColor="White" HeightRequest="180" WidthRequest="180" Stroke="White">
+                            <Grid>
+                                <Label Text="Кванто-наклейки"  Margin="40,140,0,0" FontSize="12" FontFamily="Bank" TextColor="Black"/>
+                                <Label FontSize="7" Margin="20,160,0,0" TextColor="#6B6B6B" FontFamily="Goth" Text="Наклейки с принтом разных квантумов"/>
+                                <Border BackgroundColor="Transparent" HeightRequest="120" WidthRequest="160" StrokeShape="RoundRectangle 15,15,15,15" Margin="0,-50,0,0" Stroke="#D7D7D7" StrokeThickness="4">
+                                    <Image Source="nak.jpg" />
+                                </Border>
+
+                            </Grid>
+                        </Border>
+                    </Grid>
+
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout>
+
+                    <!--Перчатки-->
+                    <Grid Margin="0,0,0,0">
+                        <Border BackgroundColor="White" HeightRequest="180" WidthRequest="180" Stroke="White">
+                            <Grid>
+                                <Label Text="Кванто-перчатки"  Margin="40,140,0,0" FontSize="12" FontFamily="Bank" TextColor="Black"/>
+                                <Label FontSize="7" Margin="20,160,0,0" TextColor="#6B6B6B" FontFamily="Goth" Text="Перчатки с принтом канториума"/>
+                                <Border BackgroundColor="Transparent" HeightRequest="120" WidthRequest="160" StrokeShape="RoundRectangle 15,15,15,15" Margin="0,-50,0,0" Stroke="#D7D7D7" StrokeThickness="4">
+                                    <Image Source="per.jpg" />
+                                </Border>
+                            </Grid>
+                        </Border>
+                    </Grid>
+
+                    <!---Штаны-->
+                    <Grid Margin="0,0,0,0">
+                        <Border BackgroundColor="White" HeightRequest="180" WidthRequest="180" Stroke="White">
+                            <Grid>
+                                <Label Text="Кванто-штаны"  Margin="40,140,0,0" FontSize="12" FontFamily="Bank" TextColor="Black"/>
+                                <Label FontSize="7" Margin="20,160,0,0" TextColor="#6B6B6B" FontFamily="Goth" Text="Штаны с принтом кванториума"/>
+                                <Border BackgroundColor="Transparent" HeightRequest="120" WidthRequest="160" StrokeShape="RoundRectangle 15,15,15,15" Margin="0,-50,0,0" Stroke="#D7D7D7" StrokeThickness="4">
+                                    <Image Source="sta.jpg" />
+                                </Border>
+
+                            </Grid>
+                        </Border>
+                    </Grid>
+
+                </HorizontalStackLayout>
+
+
+                <HorizontalStackLayout>
+
+                    <!--Худи-->
+                    <Grid Margin="0,0,0,0">
+                        <Border BackgroundColor="White" HeightRequest="180" WidthRequest="180" Stroke="White">
+                            <Grid>
+                                <Label Text="Кванто-худи"  Margin="40,140,0,0" FontSize="12" FontFamily="Bank" TextColor="Black"/>
+                                <Label FontSize="7" Margin="20,160,0,0" TextColor="#6B6B6B" FontFamily="Goth" Text="Худи с принтом канториума"/>
+                                <Border BackgroundColor="Transparent" HeightRequest="120" WidthRequest="160" StrokeShape="RoundRectangle 15,15,15,15" Margin="0,-50,0,0" Stroke="#D7D7D7" StrokeThickness="4">
+                                    <Image Source="xud.jpg" />
+                                </Border>
+                            </Grid>
+                        </Border>
+                    </Grid>
+
+                    <!---Кросовки-->
+                    <Grid Margin="0,0,0,0">
+                        <Border BackgroundColor="White" HeightRequest="180" WidthRequest="180" Stroke="White">
+                            <Grid>
+                                <Label Text="Кванто-кросы"  Margin="40,140,0,0" FontSize="12" FontFamily="Bank" TextColor="Black"/>
+                                <Label FontSize="7" Margin="20,160,0,0" TextColor="#6B6B6B" FontFamily="Goth" Text="Кросовки с принтом кванториума"/>
+                                <Border BackgroundColor="Transparent" HeightRequest="120" WidthRequest="160" StrokeShape="RoundRectangle 15,15,15,15" Margin="0,-50,0,0" Stroke="#D7D7D7" StrokeThickness="4">
+                                    <Image Source="kro.jpg" />
+                                </Border>
+
+                            </Grid>
+                        </Border>
+                    </Grid>
+
+                </HorizontalStackLayout>
+
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+        </ScrollView>
+</ContentPage>

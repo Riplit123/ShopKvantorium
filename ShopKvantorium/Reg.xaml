@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShopKvantorium.Reg"
+             Title="Вход">
+    <VerticalStackLayout>
+        <StackLayout Padding="30">
+            <Label Text="Логин" FontSize="15"/>
+            <Entry x:Name="LoginEntry" Placeholder="Введите логин" />
+
+            <Label Text="Пароль" FontSize="15" Margin="0,20,0,0"/>
+            <Entry x:Name="PasswordEntry" Placeholder="Введите пароль" IsPassword="True"/>
+
+            <Button Text="Войти" Margin="0,20,0,0" Clicked="Button_Clicked" />
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>
