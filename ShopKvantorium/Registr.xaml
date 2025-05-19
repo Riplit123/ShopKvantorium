@@ -4,6 +4,7 @@
              x:Class="ShopKvantorium.Registr"
              Title="Registr">
     <VerticalStackLayout Padding="20" Spacing="15">
+        <Entry Placeholder="ФИО" x:Name="FionameEntry"/>
         <Entry Placeholder="Логин" x:Name="UsernameEntry"/>
         <Entry Placeholder="Пароль" x:Name="PasswordEntry" IsPassword="True"/>
         <Entry Placeholder="Повторите пароль" x:Name="ConfirmPasswordEntry" IsPassword="True"/>

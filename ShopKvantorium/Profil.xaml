@@ -18,7 +18,7 @@
             <Grid Margin="0,-1,0,0">
                 <Border BackgroundColor="Transparent" HeightRequest="100" WidthRequest="365" Stroke="#408AD2" StrokeShape="RoundRectangle 0,0,15,15">
                     <Grid>
-                        <Label Text="И.И. Иванович"  Margin="120,30,0,0" FontSize="20" FontFamily="Bank" TextColor="White"/>
+                        <Label x:Name="Fio"  Margin="120,30,0,0" FontSize="20" FontFamily="Bank" TextColor="White"/>
                         <Label x:Name="Nik" Margin="120,50,0,0" FontSize="14" FontFamily="Bank" TextColor="#9F9F9F"/>
                         <Border BackgroundColor="#D7D7D7" HeightRequest="80" WidthRequest="80" StrokeShape="RoundRectangle 15,15,15,15" Margin="-240,0,0,0" Stroke="#408AD2" StrokeThickness="4">
                         </Border>

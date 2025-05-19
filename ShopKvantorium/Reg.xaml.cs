@@ -25,6 +25,7 @@ public partial class Reg : ContentPage
             {
                 await SecureStorage.Default.SetAsync("username", user.Username);
                 await SecureStorage.Default.SetAsync("password", user.Password);
+                await SecureStorage.SetAsync("fullname", user.Fioname);
 
                 Application.Current.MainPage = new NavigationPage(new AppShell());
             }

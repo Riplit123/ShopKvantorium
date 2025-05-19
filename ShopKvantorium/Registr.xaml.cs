@@ -24,14 +24,22 @@ public partial class Registr : ContentPage
             return;
         }
 
+        if (string.IsNullOrWhiteSpace(FionameEntry.Text))
+        {
+            await DisplayAlert("Ошибка", "Введите ФИО", "OK");
+            return;
+        }
+
         var newUser = new User
         {
+            Fioname = FionameEntry.Text,
             Username = UsernameEntry.Text,
             Password = PasswordEntry.Text
         };
 
         users.Add(newUser);
         UserService.SaveUsers(users);
+        await SecureStorage.SetAsync("fullname", newUser.Fioname);
 
         await DisplayAlert("Успех", "Регистрация прошла успешно", "OK");
         await Navigation.PopAsync();

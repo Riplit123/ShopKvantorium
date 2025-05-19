@@ -14,8 +14,12 @@ public partial class Profil : ContentPage
         try
         {
             var username = await SecureStorage.Default.GetAsync("username");
+            var fullName = await SecureStorage.GetAsync("fullname");
+            Fio.Text = string.IsNullOrEmpty(fullName)
+                ? fullName
+                : $"{fullName}";
             Nik.Text = string.IsNullOrEmpty(username)
-                ? "Анонимный пользователь"
+                ? fullName
                 : $"@{username}";
         }
         catch (Exception ex)
