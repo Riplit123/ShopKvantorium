@@ -2,17 +2,18 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ShopKvantorium.Sorevnovania"
-             Title="Главная страница" >
+             Title="Главная страница">
     <Grid>
-        <ScrollView Orientation="Vertical">
+
+        
+
+        <ScrollView Margin="0,60,0,0" Orientation="Vertical">
 
             <VerticalStackLayout>
 
                 <Frame HeightRequest="70" WidthRequest="380" BackgroundColor="Red" BorderColor="Transparent" Margin="0,-10,0,0">
                     <SearchBar Placeholder="Поиск" TextColor="White" PlaceholderColor="White" CancelButtonColor="White" BackgroundColor="#FF7373" />
                 </Frame>
-
-
 
 
                 <VerticalStackLayout>
@@ -114,16 +115,69 @@
 
                     </HorizontalStackLayout>
 
+                    <HorizontalStackLayout>
+
+                        <!--Технострелка-->
+                        <Grid Margin="0,0,0,0">
+                            <Border BackgroundColor="White" HeightRequest="180" WidthRequest="180" Stroke="White">
+                                <Grid>
+                                    <Label Text="ТехноСтрелка 2024"  Margin="40,130,0,0" FontSize="12" FontFamily="Bank" TextColor="Black"/>
+                                    <Label FontSize="7" Margin="20,145,0,0" TextColor="#6B6B6B" FontFamily="Goth" Text="«ТехноСтрелка» — международный фестиваль для детей в возрасте 12–18 лет, которые знают о современных технологиях не только в теории, но и на практике. "/>
+                                    <Border BackgroundColor="#D7D7D7" HeightRequest="120" WidthRequest="160" StrokeShape="RoundRectangle 15,15,15,15" Margin="0,-50,0,0" Stroke="#D7D7D7" StrokeThickness="4">
+                                        <Image Source="texstrel.jpg" />
+                                    </Border>
+                                </Grid>
+                            </Border>
+                        </Grid>
+
+                        <!---Икар-->
+                        <Grid Margin="0,0,0,0">
+                            <Border BackgroundColor="White" HeightRequest="180" WidthRequest="180" Stroke="White">
+                                <Grid>
+                                    <Label Text="Инженерные кадры России"  Margin="10,130,0,0" FontSize="12" FontFamily="Bank" TextColor="Black"/>
+                                    <Label FontSize="7" Margin="5,145,0,0" TextColor="#6B6B6B" FontFamily="Goth" Text="«Инженерные кадры России» — это робототехнический конкурс, на котором можно продемонстрировать свои умения и посмотреть на других."/>
+                                    <Border BackgroundColor="White" HeightRequest="120" WidthRequest="160" StrokeShape="RoundRectangle 15,15,15,15" Margin="0,-50,0,0" Stroke="#D7D7D7" StrokeThickness="4">
+                                        <Image Source="icar.png" />
+                                    </Border>
+
+                                </Grid>
+                            </Border>
+                        </Grid>
+
+                    </HorizontalStackLayout>
+
                 </VerticalStackLayout>
 
             </VerticalStackLayout>
 
         </ScrollView>
 
-        <Grid Margin="0,570,0,0" HeightRequest="20" WidthRequest="380" BackgroundColor="White">
-            
-            <Border HeightRequest="80" WidthRequest="80" StrokeShape="RoundRectangle 20,20,20,20" Opacity="0.8" BackgroundColor="Green" StrokeThickness="1.5" Stroke="White">
-                <Button Clicked="Button_Clicked_1" />
+        <Grid Margin="0,0,0,600" HeightRequest="70" WidthRequest="380" BackgroundColor="Red">
+            <Label Text="Главная страница" FontSize="18" FontFamily="Bank" TextColor="White" Margin="60,25,0,0"/>
+
+            <Border Margin="0,5,310,0" HeightRequest="50" WidthRequest="50" StrokeShape="RoundRectangle 20,20,20,20" Opacity="0.8" BackgroundColor="Transparent" StrokeThickness="1.5" Stroke="Red">
+                <Button Clicked="Button_Clicked_5" HeightRequest="50" WidthRequest="50" BackgroundColor="Transparent" ImageSource="naz.png"/>
+            </Border>
+
+        </Grid>
+
+        <!-- Понель навигации -->
+        <Grid Margin="0,615,0,0" HeightRequest="55" WidthRequest="380" BackgroundColor="White">
+
+            <Border Margin="0,0,250,10" HeightRequest="45" WidthRequest="55" StrokeShape="RoundRectangle 20,20,20,20" Opacity="0.8" BackgroundColor="White" StrokeThickness="1.5" Stroke="White">
+                <Button Clicked="Button_Clicked_1" HeightRequest="55" WidthRequest="55" BackgroundColor="White"  ImageSource="home.png"/>
+            </Border>
+
+            <Border Margin="0,0,80,10" HeightRequest="45" WidthRequest="55" StrokeShape="RoundRectangle 20,20,20,20" Opacity="0.8" BackgroundColor="White" StrokeThickness="1.5" Stroke="White">
+                <Button Clicked="Button_Clicked_2" HeightRequest="45" WidthRequest="50" BackgroundColor="White"  ImageSource="poisk.png"/>
+            </Border>
+
+            <Border Margin="0,0,-80,10" HeightRequest="45" WidthRequest="55" StrokeShape="RoundRectangle 20,20,20,20" Opacity="0.8" BackgroundColor="White" StrokeThickness="1.5" Stroke="White">
+                <Button Clicked="Button_Clicked_3" HeightRequest="45" WidthRequest="55" BackgroundColor="White"  ImageSource="meropriatia.png"/>
+            </Border>
+
+            <Border Margin="0,0,-250,10" HeightRequest="45" WidthRequest="55" StrokeShape="RoundRectangle 20,20,20,20" Opacity="0.8" BackgroundColor="White" StrokeThickness="1.5" Stroke="White">
+                <Button Clicked="Button_Clicked_4" HeightRequest="45" WidthRequest="55" BackgroundColor="White"  ImageSource="profill.png"/>
             </Border>
         </Grid>
                 

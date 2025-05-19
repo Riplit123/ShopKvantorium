@@ -1,3 +1,4 @@
+
 using Microsoft.Extensions.Logging.Abstractions;
 using Newtonsoft.Json;
 using System.Text;
@@ -13,43 +14,36 @@ public partial class Reg : ContentPage
 
     private async void Button_Clicked(object sender, EventArgs e)
     {
-        var login = LoginEntry.Text;
-        var password = PasswordEntry.Text;
-
-        bool isAuthenticated = await AuthenticateUser(login, password);
-
-        if (isAuthenticated)
+        try
         {
-            Preferences.Set("login", login);
-            Preferences.Set("password", password);
+            var users = UserService.GetUsers();
+            var user = users.FirstOrDefault(u =>
+                u.Username == LoginEntry.Text &&
+                u.Password == PasswordEntry.Text);
 
-            Application.Current.MainPage = new AppShell();
+            if (user != null)
+            {
+                await SecureStorage.Default.SetAsync("username", user.Username);
+                await SecureStorage.Default.SetAsync("password", user.Password);
+
+                Application.Current.MainPage = new NavigationPage(new AppShell());
+            }
+            else
+            {
+                await DisplayAlert("Ошибка", "Неверные данные", "OK");
+            }
         }
-        else
+        catch (Exception ex)
         {
-            await DisplayAlert("Ошибка", "Неверный логин или пароль", "Ок");
+            await DisplayAlert("Ошибка", ex.Message, "OK");
         }
     }
 
 
-    private async Task<bool> AuthenticateUser(string login, string password)
+    
+
+    private async void Button_Clicked_1(object sender, EventArgs e)
     {
-
-        var client = new HttpClient();
-        var url = "https://node-server-1-7yyx.onrender.com/auth";
-
-        var data = new
-        {
-            login = login,
-            password = password
-        };
-
-        var json = JsonConvert.SerializeObject(data);
-        var content = new StringContent(json, Encoding.UTF8, "application/json");
-
-        var response = await client.PostAsync(url, content);
-
-        return response.IsSuccessStatusCode;
-
+        await Navigation.PushAsync(new Registr());
     }
 }

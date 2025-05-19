@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ShopKvantorium.Reg"
              Title="Вход">
+    
     <VerticalStackLayout>
         <StackLayout Padding="30">
             <Label Text="Логин" FontSize="15"/>
@@ -11,7 +12,18 @@
             <Label Text="Пароль" FontSize="15" Margin="0,20,0,0"/>
             <Entry x:Name="PasswordEntry" Placeholder="Введите пароль" IsPassword="True"/>
 
+            <CheckBox x:Name="RememberMeCheckBox" 
+                HorizontalOptions="Start"
+                VerticalOptions="Center"/>
+            
+            <Label Margin="0,0,0,0" Text="Запомнить меня" 
+                VerticalOptions="Center"
+                HorizontalOptions="Start"/>
+            
             <Button Text="Войти" Margin="0,20,0,0" Clicked="Button_Clicked" />
+
+            <Button Text="Регистрация" Margin="0,20,0,0" Clicked="Button_Clicked_1" />
+            
         </StackLayout>
     </VerticalStackLayout>
 </ContentPage>

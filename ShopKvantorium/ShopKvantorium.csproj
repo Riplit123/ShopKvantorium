@@ -57,18 +57,28 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\ak.jpg" />
+	  <None Remove="Resources\Images\bio.png" />
+	  <None Remove="Resources\Images\biolab.jpg" />
 	  <None Remove="Resources\Images\bril.jpg" />
+	  <None Remove="Resources\Images\cemp.jpg" />
 	  <None Remove="Resources\Images\fut.jpg" />
 	  <None Remove="Resources\Images\fut2.jpg" />
+	  <None Remove="Resources\Images\hitech.png" />
 	  <None Remove="Resources\Images\home.png" />
+	  <None Remove="Resources\Images\icar.png" />
+	  <None Remove="Resources\Images\igr.png" />
+	  <None Remove="Resources\Images\it.png" />
 	  <None Remove="Resources\Images\iz.jpg" />
 	  <None Remove="Resources\Images\korzina.png" />
 	  <None Remove="Resources\Images\kr.jpg" />
 	  <None Remove="Resources\Images\kro.jpg" />
 	  <None Remove="Resources\Images\kru.jpg" />
+	  <None Remove="Resources\Images\liga.jpg" />
 	  <None Remove="Resources\Images\logo.png" />
+	  <None Remove="Resources\Images\meropriatia.png" />
 	  <None Remove="Resources\Images\mt.jpg" />
 	  <None Remove="Resources\Images\nak.jpg" />
+	  <None Remove="Resources\Images\naz.png" />
 	  <None Remove="Resources\Images\nb.jpg" />
 	  <None Remove="Resources\Images\nos.jpg" />
 	  <None Remove="Resources\Images\od.jpg" />
@@ -76,10 +86,15 @@
 	  <None Remove="Resources\Images\poisk.png" />
 	  <None Remove="Resources\Images\profill.png" />
 	  <None Remove="Resources\Images\ps.jpg" />
+	  <None Remove="Resources\Images\rob.jpg" />
 	  <None Remove="Resources\Images\sm.jpg" />
+	  <None Remove="Resources\Images\smi.png" />
 	  <None Remove="Resources\Images\sop.jpg" />
 	  <None Remove="Resources\Images\spod.jpg" />
 	  <None Remove="Resources\Images\sta.jpg" />
+	  <None Remove="Resources\Images\tehnofest.jpg" />
+	  <None Remove="Resources\Images\texstrel.jpg" />
+	  <None Remove="Resources\Images\vr.png" />
 	  <None Remove="Resources\Images\xud.jpg" />
 	  <None Remove="Resources\Images\yk.jpg" />
 	</ItemGroup>
@@ -95,6 +110,9 @@
 	  <Compile Update="Poisk.xaml.cs">
 	    <DependentUpon>Poisk.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="AkauntS.xaml.cs">
+	    <DependentUpon>AkauntS.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Sorevnovania.xaml.cs">
 	    <DependentUpon>Sorevnovania.xaml</DependentUpon>
 	  </Compile>
@@ -107,13 +125,28 @@
 	  <MauiXaml Update="Korzina.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="LoadingPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Meropriatia.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Poisk.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="PoiskS.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Profil.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="AkauntS.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Reg.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Registr.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Sorevnovania.xaml">

@@ -3,10 +3,167 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ShopKvantorium.Profil"
              Title="Profil">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+
+    <Grid Margin="0,0,0,600" HeightRequest="70" WidthRequest="380" BackgroundColor="Transparent">
+
+        <Grid Margin="-3,120,0,0">
+            <!--Профиль-->
+
+            <Grid Margin="0,-70,0,0">
+                <Border BackgroundColor="#408AD2" HeightRequest="270" WidthRequest="365" Stroke="#408AD2" StrokeShape="RoundRectangle 0,0,15,15">
+                    
+                </Border>
+            </Grid>
+
+            <Grid Margin="0,-1,0,0">
+                <Border BackgroundColor="Transparent" HeightRequest="100" WidthRequest="365" Stroke="#408AD2" StrokeShape="RoundRectangle 0,0,15,15">
+                    <Grid>
+                        <Label Text="И.И. Иванович"  Margin="120,30,0,0" FontSize="20" FontFamily="Bank" TextColor="White"/>
+                        <Label x:Name="Nik" Margin="120,50,0,0" FontSize="14" FontFamily="Bank" TextColor="#9F9F9F"/>
+                        <Border BackgroundColor="#D7D7D7" HeightRequest="80" WidthRequest="80" StrokeShape="RoundRectangle 15,15,15,15" Margin="-240,0,0,0" Stroke="#408AD2" StrokeThickness="4">
+                        </Border>
+                    </Grid>
+                </Border>
+                <Button HeightRequest="100" WidthRequest="365" CornerRadius="25" BackgroundColor="Transparent" Margin="0,0,0,0" Clicked="Button_Clicked"/>
+
+            </Grid>
+
+
+            <Label Text="Профиль" FontSize="18" FontFamily="Bank" TextColor="White" Margin="60,-105,0,0"/>
+
+
+
+
+            
+
+                <Grid Margin="12,95,0,0">
+                
+
+                    <VerticalStackLayout>
+
+                    <HorizontalStackLayout>
+
+                            <!--Рекомендации-->
+                            <Grid Margin="5,0,0,0">
+                                <Border BackgroundColor="White" HeightRequest="30" WidthRequest="350" Stroke="White" >
+                                    <Grid>
+                                    <Label Text="Вы участвовали в соревнованиях:" Margin="10,5,0,0" FontSize="16" FontFamily="Bank" TextColor="Black"/>
+                                    </Grid>
+                                </Border>
+                            </Grid>
+
+                   </HorizontalStackLayout>
+
+                        <HorizontalStackLayout>
+
+                            <!--Чемпионат-->
+                            <Grid Margin="0,0,0,0">
+                                <Border BackgroundColor="White" HeightRequest="180" WidthRequest="180" Stroke="White">
+                                    <Grid>
+                                        <Label Text="Чемпионат педагогических компетенций"  Margin="12,130,0,0" FontSize="12" FontFamily="Bank" TextColor="Black"/>
+                                        <Label FontSize="7" Margin="20,160,0,0" TextColor="#6B6B6B" FontFamily="Goth" Text="Даты: 8-10 декабря, Нижний Новгород"/>
+                                        <Border BackgroundColor="#2A4480" HeightRequest="120" WidthRequest="160" StrokeShape="RoundRectangle 15,15,15,15" Margin="0,-50,0,0" Stroke="Transparent" StrokeThickness="4">
+                                            <Image Source="cemp.jpg" />
+                                        </Border>
+                                    </Grid>
+                                </Border>
+                            </Grid>
+
+                            <!--БиоЛаб-->
+                            <Grid Margin="0,0,0,0">
+                                <Border BackgroundColor="White" HeightRequest="180" WidthRequest="180" Stroke="White">
+                                    <Grid>
+                                        <Label Text="Межрегиональный хакатон «БиоЛаб»"  Margin="30,130,0,0" FontSize="12" FontFamily="Bank" TextColor="Black"/>
+                                        <Label FontSize="7" Margin="20,160,0,0" TextColor="#6B6B6B" FontFamily="Goth" Text="Детский технопарк «Кванториум» Нижний Новгород запускает регистрацию на Межрегиональный Хакатон «БиоЛаб»."/>
+                                        <Border BackgroundColor="#DBDBDB" HeightRequest="120" WidthRequest="160" StrokeShape="RoundRectangle 15,15,15,15" Margin="0,-50,0,0" Stroke="Transparent" StrokeThickness="4">
+                                            <Image Source="biolab.jpg" />
+                                        </Border>
+
+                                    </Grid>
+                                </Border>
+                            </Grid>
+
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout>
+
+                            <!--ТехноФест-->
+                            <Grid Margin="0,0,0,0">
+                                <Border BackgroundColor="White" HeightRequest="180" WidthRequest="180" Stroke="White">
+                                    <Grid>
+                                        <Label Text="ТехноФест"  Margin="50,125,0,0" FontSize="12" FontFamily="Bank" TextColor="Black"/>
+                                        <Label FontSize="7" Margin="20,145,0,0" TextColor="#6B6B6B" FontFamily="Goth" Text="Целью Фестиваля является популяризация научно-технического творчества и робототехники как привлекательных и перспективных занятий среди детей, юношества и молодежи с целью повышения престижа инженерных профессий."/>
+                                        <Border BackgroundColor="#aac14c" HeightRequest="120" WidthRequest="160" StrokeShape="RoundRectangle 15,15,15,15" Margin="0,-50,0,0" Stroke="#aac14c" StrokeThickness="4">
+                                            <Image Source="tehnofest.jpg" />
+                                        </Border>
+                                    </Grid>
+                                </Border>
+                            </Grid>
+
+                            <!--Лига-->
+                            <Grid Margin="0,0,0,0">
+                                <Border BackgroundColor="White" HeightRequest="180" WidthRequest="180" Stroke="White">
+                                    <Grid>
+                                        <Label Text="«Лига»"  Margin="60,125,0,0" FontSize="12" FontFamily="Bank" TextColor="Black"/>
+                                        <Label FontSize="7" Margin="20,150,0,0" TextColor="#6B6B6B" FontFamily="Goth" Text="Региональный отборочный Чемпионат Международных образовательных STEAM-соревнований по робототехнике «Лига»"/>
+                                        <Border BackgroundColor="White" HeightRequest="120" WidthRequest="160" StrokeShape="RoundRectangle 15,15,15,15" Margin="0,-50,0,0" Stroke="#D7D7D7" StrokeThickness="4">
+                                            <Image Source="liga.jpg" />
+                                        </Border>
+
+                                    </Grid>
+                                </Border>
+                            </Grid>
+
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout>
+
+                            <!--Технострелка-->
+                            <Grid Margin="0,0,0,0">
+                                <Border BackgroundColor="White" HeightRequest="180" WidthRequest="180" Stroke="White">
+                                    <Grid>
+                                        <Label Text="ТехноСтрелка 2024"  Margin="40,130,0,0" FontSize="12" FontFamily="Bank" TextColor="Black"/>
+                                        <Label FontSize="7" Margin="20,145,0,0" TextColor="#6B6B6B" FontFamily="Goth" Text="«ТехноСтрелка» — международный фестиваль для детей в возрасте 12–18 лет, которые знают о современных технологиях не только в теории, но и на практике. "/>
+                                        <Border BackgroundColor="#D7D7D7" HeightRequest="120" WidthRequest="160" StrokeShape="RoundRectangle 15,15,15,15" Margin="0,-50,0,0" Stroke="#D7D7D7" StrokeThickness="4">
+                                            <Image Source="texstrel.jpg" />
+                                        </Border>
+                                    </Grid>
+                                </Border>
+                            </Grid>
+
+                            <!---Икар-->
+                            <Grid Margin="0,0,0,0">
+                                <Border BackgroundColor="White" HeightRequest="180" WidthRequest="180" Stroke="White">
+                                    <Grid>
+                                        <Label Text="Инженерные кадры России"  Margin="10,130,0,0" FontSize="12" FontFamily="Bank" TextColor="Black"/>
+                                        <Label FontSize="7" Margin="5,145,0,0" TextColor="#6B6B6B" FontFamily="Goth" Text="«Инженерные кадры России» — это робототехнический конкурс, на котором можно продемонстрировать свои умения и посмотреть на других."/>
+                                        <Border BackgroundColor="White" HeightRequest="120" WidthRequest="160" StrokeShape="RoundRectangle 15,15,15,15" Margin="0,-50,0,0" Stroke="#D7D7D7" StrokeThickness="4">
+                                            <Image Source="icar.png" />
+                                        </Border>
+
+                                    </Grid>
+                                </Border>
+                            </Grid>
+
+                        </HorizontalStackLayout>
+
+
+                </VerticalStackLayout>
+                         
+          </Grid>
+       
+     </Grid>
+        
+            <Border Margin="0,-10,320,0" HeightRequest="50" WidthRequest="50" StrokeShape="RoundRectangle 20,20,20,20" Opacity="0.8" BackgroundColor="Transparent" StrokeThickness="1.5" Stroke="#408AD2">
+                <Button Clicked="Button_Clicked" HeightRequest="50" WidthRequest="50" BackgroundColor="Transparent" ImageSource="naz.png"/>
+            </Border>
+
+            <Border Margin="220,-10,0,0" HeightRequest="40" WidthRequest="100" StrokeShape="RoundRectangle 20,20,20,20" Opacity="0.8" BackgroundColor="Transparent" StrokeThickness="1" Stroke="White">
+                <Button Clicked="Button_Clicked_1" HeightRequest="40" WidthRequest="100" BackgroundColor="Transparent" Text="Выйти" TextColor="White" FontSize="18" FontFamily="Bank" />
+            </Border>
+
+            <Border Margin="220,300,0,0" HeightRequest="40" WidthRequest="130" StrokeShape="RoundRectangle 20,20,20,20" Opacity="0.8" BackgroundColor="Transparent" StrokeThickness="1" Stroke="White">
+                <Button Clicked="Button_Clicked_2" HeightRequest="40" WidthRequest="130" BackgroundColor="Transparent" Text="Редактировать профиль" TextColor="White" FontSize="18" FontFamily="Bank" />
+            </Border>
+    </Grid>
 </ContentPage>
